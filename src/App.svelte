@@ -1,4 +1,68 @@
 <script lang="ts">
+	const heads = [
+	{
+		tag: 'h1',
+		heading: 'Warten',
+		body: 'Überspringt den Zug, ohne etwas zu tun'
+	},
+	{
+		tag: 'h2',
+		heading: 'Angreifen',
+		body: 'Greift ein benachbartes Ziel im Nahkampf an'
+	},
+	{
+		tag: 'h3',
+		heading: 'Schießen',
+		body: 'Führt einen Fernkampfangriff auf ein Ziel aus'
+	},
+	{
+		tag: 'h2',
+		heading: 'Tür öffnen',
+		body: 'Öffnet eine Tür in Reichweite'
+	},
+	{
+		tag: 'h4',
+		heading: 'Tür schließen',
+		body: 'Schließt eine geöffnete Tür'
+	},
+	{
+		tag: 'h3',
+		heading: 'Aufheben',
+		body: 'Hebt ein Item vom Boden auf'
+	},
+	{
+		tag: 'h5',
+		heading: 'Item verwenden',
+		body: 'Benutzt ein Item aus dem Inventar'
+	},
+	{
+		tag: 'h1',
+		heading: 'Item ablegen',
+		body: 'Lege ein Item auf den Boden'
+	},
+	{
+		tag: 'h3',
+		heading: 'Ausrüsten',
+		body: 'Rüste ein Item aus dem Inventar aus'
+	},
+	{
+		tag: 'h4',
+		heading: 'Ablegen',
+		body: 'Lege ein ausgerüstetes Item ab'
+	},
+	{
+		tag: 'h5',
+		heading: 'Interagieren',
+		body: 'Interagiert mit einem Objekt'
+	},
+	{
+		tag: 'h6',
+		heading: 'Treppe runter',
+		body: 'Steigt eine Ebene tiefer'
+	}
+]
+
+
 	const page = {
 		heading: 'Nwp-Studio',
 		body: 'Vite + Svelte + TypeScript + Tailwind'
@@ -14,7 +78,8 @@
 			<div class="p-4">
 				<h1>{page.heading}</h1>
 				<h4>{page.body}</h4>
-				<div class="flex flex-col gap-2">
+				<p>Tailwind</p>
+				<div class="flex flex-col gap-2 hidden">
 					<h1>Warten</h1>
 					<p class="lead">Überspringt den Zug, ohne etwas zu tun</p>
 					<h2>Angreifen</h2>
