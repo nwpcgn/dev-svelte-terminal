@@ -1,0 +1,24 @@
+// @import 'patreals/_vars.scss';
+// @import 'patreals/_body.scss';
+// @import 'patreals/_main.scss';
+// @import 'patreals/_layer.scss';
+// @import 'patreals/_content.scss';
+// @import 'patreals/_img-grid.scss';
+// @import 'patreals/_game-grid.scss';
+// @import 'patreals/_game-util.scss';
+// @import 'patreals/_svg-icon.scss';
+
+@use 'patreals/_vars.scss';
+@use 'patreals/_body.scss';
+@use 'patreals/_main.scss';
+@use 'patreals/_layer.scss';
+@use 'patreals/_content.scss';
+@use 'patreals/_img-grid.scss';
+@use 'patreals/_game-bg.scss';
+// @use 'patreals/_rogue-grid.scss';
+@use 'patreals/_game-box.scss';
+// @use 'patreals/_game-util.scss';
+@use 'patreals/_svg-icon.scss';
+// @use 'patreals/flip-card.scss';
+@use 'patreals/_util.scss';
+// @use 'patreals/_splash.scss';

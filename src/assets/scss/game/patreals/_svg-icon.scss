@@ -1,0 +1,16 @@
+svg {
+	&.nwp-icon,
+	&.pkmn-icon {
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		stroke-width: 0;
+		stroke: currentColor;
+		fill: currentColor;
+		font-size: var(--fs, 1rem);
+	}
+
+	&.nwp-icon {
+		font-size: var(--fs, 24px);
+	}
+}

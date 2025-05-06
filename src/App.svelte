@@ -1,113 +1,54 @@
 <script lang="ts">
-	const heads = [
-	{
-		tag: 'h1',
-		heading: 'Warten',
-		body: 'Überspringt den Zug, ohne etwas zu tun'
-	},
-	{
-		tag: 'h2',
-		heading: 'Angreifen',
-		body: 'Greift ein benachbartes Ziel im Nahkampf an'
-	},
-	{
-		tag: 'h3',
-		heading: 'Schießen',
-		body: 'Führt einen Fernkampfangriff auf ein Ziel aus'
-	},
-	{
-		tag: 'h2',
-		heading: 'Tür öffnen',
-		body: 'Öffnet eine Tür in Reichweite'
-	},
-	{
-		tag: 'h4',
-		heading: 'Tür schließen',
-		body: 'Schließt eine geöffnete Tür'
-	},
-	{
-		tag: 'h3',
-		heading: 'Aufheben',
-		body: 'Hebt ein Item vom Boden auf'
-	},
-	{
-		tag: 'h5',
-		heading: 'Item verwenden',
-		body: 'Benutzt ein Item aus dem Inventar'
-	},
-	{
-		tag: 'h1',
-		heading: 'Item ablegen',
-		body: 'Lege ein Item auf den Boden'
-	},
-	{
-		tag: 'h3',
-		heading: 'Ausrüsten',
-		body: 'Rüste ein Item aus dem Inventar aus'
-	},
-	{
-		tag: 'h4',
-		heading: 'Ablegen',
-		body: 'Lege ein ausgerüstetes Item ab'
-	},
-	{
-		tag: 'h5',
-		heading: 'Interagieren',
-		body: 'Interagiert mit einem Objekt'
-	},
-	{
-		tag: 'h6',
-		heading: 'Treppe runter',
-		body: 'Steigt eine Ebene tiefer'
-	}
-]
+	import { Sprites, TabBar, nav } from './lib'
+	import {
+		Router,
+		route,
+		type RouteConfig
+	} from '@mateothegreat/svelte5-router'
 
-
-	const page = {
-		heading: 'Nwp-Studio',
-		body: 'Vite + Svelte + TypeScript + Tailwind'
-	}
+	const routes: RouteConfig[] = [
+		{
+			path: '/',
+			component: async () => import('./views/Start.svelte')
+		},
+		{
+			path: '/game',
+			component: async () => import('./views/game/Game.svelte')
+		},
+		{
+			path: '/dungeon',
+			component: async () => import('./views/dungeon/Dungeon.svelte')
+		},
+		{
+			path: '/battle1',
+			component: async () => import('./views/battle1/Battle.svelte')
+		},
+		{
+			path: '/settings',
+			component: async () => import('./views/dev/Test1.svelte')
+		}
+	]
 </script>
 
 <div class="grid h-screen w-screen grid-rows-[auto_1fr_auto] overflow-hidden">
-	<header class="bg-slate-600 p-1">BAR</header>
+	<header class="app-bar">
+		<div class="content">
+			<h1 class="headline">
+				<a href="/" use:route style="color: inherit;">Terminal.css</a>
+			</h1>
+		</div>
+	</header>
 	<div
 		class="grid grid-cols-1 grid-rows-[auto_1fr_auto] overflow-hidden md:grid-cols-[auto_1fr_auto] md:grid-rows-1">
-		<aside class="relative overflow-hidden bg-slate-400 p-1">S1</aside>
-		<main class="h-full w-full overflow-x-hidden overflow-y-auto bg-slate-200">
-			<div class="p-4">
-				<h1>{page.heading}</h1>
-				<h4>{page.body}</h4>
-				<p>Tailwind</p>
-				<div class="flex flex-col gap-2 hidden">
-					<h1>Warten</h1>
-					<p class="lead">Überspringt den Zug, ohne etwas zu tun</p>
-					<h2>Angreifen</h2>
-					<p class="lead">Greift ein benachbartes Ziel im Nahkampf an</p>
-					<h3>Schießen</h3>
-					<p class="lead">Führt einen Fernkampfangriff auf ein Ziel aus</p>
-					<h2>Tür öffnen</h2>
-					<p class="lead">Öffnet eine Tür in Reichweite</p>
-					<h4>Tür schließen</h4>
-					<p class="lead">Schließt eine geöffnete Tür</p>
-					<h3>Aufheben</h3>
-					<p class="lead">Hebt ein Item vom Boden auf</p>
-					<h5>Item verwenden</h5>
-					<p class="lead">Benutzt ein Item aus dem Inventar</p>
-					<h1>Item ablegen</h1>
-					<p class="lead">Lege ein Item auf den Boden</p>
-					<h3>Ausrüsten</h3>
-					<p class="lead">Rüste ein Item aus dem Inventar aus</p>
-					<h4>Ablegen</h4>
-					<p class="lead">Lege ein ausgerüstetes Item ab</p>
-					<h5>Interagieren</h5>
-					<p class="lead">Interagiert mit einem Objekt</p>
-					<h6>Treppe runter</h6>
-					<p class="lead">Steigt eine Ebene tiefer</p>
-				</div>
-			</div>
+		<aside class="relative overflow-hidden"></aside>
+		<main class="main-content">
+			<Router {routes}></Router>
 		</main>
 		<aside class="relative overflow-hidden"></aside>
 	</div>
-	<footer class="bg-slate-600 p-1">FOO</footer>
+	<footer class="foo-bar">
+		<div class="content">
+			<TabBar></TabBar>
+		</div>
+	</footer>
 </div>

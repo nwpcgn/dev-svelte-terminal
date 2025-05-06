@@ -1,0 +1,77 @@
+table.rogue {
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+	td {
+		margin: 0;
+		padding: 0;
+		border-width: var(--gg-gap);
+		border: 0;
+	}
+	div {
+		overflow: hidden;
+		width: var(--gg-size, 20px);
+		aspect-ratio: 1/1;
+		display: grid;
+		grid-template-areas: 'stack';
+		> * {
+			grid-area: stack;
+			display: grid;
+			place-content: center;
+		}
+		span {
+			font-size: calc(var(--gg-size) * 0.6);
+		}
+	}
+	.floor {
+		background-color: pink;
+	}
+	.wall {
+		background-color: yellowgreen;
+	}
+	.room {
+		background-color: var(--color-red-500);
+	}
+	.door {
+		background-color: var(--color-blue-600);
+	}
+	.corridor {
+		background-color: var(--color-amber-500);
+	}
+}
+
+.custom-loader {
+	width: 100px;
+	height: 100px;
+	display: grid;
+	border: 8px solid #0000;
+	border-radius: 50%;
+	border-color: var(--color-accent-600) #0000;
+	animation: animationS6 1s infinite linear;
+
+	&::before,
+	&::after {
+		content: '';
+		grid-area: 1/1;
+		margin: 4px;
+		border: inherit;
+		border-radius: 50%;
+	}
+
+	&::before {
+		border-color: var(--color-accent-300) #0000;
+		animation: inherit;
+		animation-duration: 1s;
+		animation-direction: reverse;
+	}
+
+	&::after {
+		margin: 16px;
+	}
+}
+@keyframes animationS6 {
+	100% {
+		transform: rotate(1turn);
+	}
+}

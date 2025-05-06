@@ -1,0 +1,145 @@
+.page-layer {
+	--oy: auto;
+	--pc: center;
+	--ad: 1.5s;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	overflow-x: hidden;
+	overflow-y: var(--oy);
+
+	&.fix {
+		--oy: hidden;
+	}
+
+	&.center {
+		display: grid;
+		place-content: var(--pc);
+	}
+
+	&.nwp {
+		animation: var(--ad) cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
+		animation-delay: 0.2s;
+	}
+}
+
+.page-layer {
+	transition:
+		transform var(--layer-dur, 0.5s) ease-in-out var(--layer-del, 0s),
+		opacity 0.3s ease 0.1s;
+
+	&.top {
+		--layer-del: 0.1s;
+		transform: translate(0, -100%);
+		opacity: 0;
+	}
+
+	&.bottom {
+		--layer-del: 0.1s;
+		transform: translate(0, 100%);
+		opacity: 0;
+	}
+
+	&.left {
+		--layer-del: 0.1s;
+		transform: translate(-100%, 0);
+		opacity: 0;
+	}
+
+	&.right {
+		--layer-del: 0.1s;
+		transform: translate(100%, 0);
+		opacity: 0;
+	}
+
+	&.active {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
+.grid-parent {
+	position: relative;
+	overflow: hidden;
+	display: grid;
+	grid-template: 1 / 1;
+
+	&.nwp {
+		animation: var(--ad) cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
+		animation-delay: 0.2s;
+	}
+}
+
+.grid-child {
+	grid-row: 1;
+	grid-column: 1;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
+	transition:
+		transform 400ms ease-in-out,
+		opacity 280ms ease-in 100ms;
+	background-repeat: no-repeat;
+}
+
+.circle-center {
+	animation: var(--dur, 2.5s) cubic-bezier(0.25, 1, 0.3, 1) circle-out-center
+		both;
+	animation-delay: var(--del, 0s);
+}
+
+.circle-in {
+	animation: var(--dur, 2.5s) cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate
+		both;
+	animation-delay: var(--del, 0.1s);
+}
+
+@keyframes circle-in-center {
+	from {
+		clip-path: circle(0%);
+	}
+
+	to {
+		clip-path: circle(125%);
+	}
+}
+
+@keyframes circle-in-hesitate {
+	0% {
+		clip-path: circle(0%);
+	}
+
+	40% {
+		clip-path: circle(40%);
+	}
+
+	100% {
+		clip-path: circle(125%);
+	}
+}
+
+.grid-child.left {
+	transform: translateX(-100%);
+}
+
+.grid-child.right {
+	transform: translateX(100%);
+}
+
+.grid-child.bottom {
+	transform: translateY(100%);
+	opacity: 0;
+}
+
+.grid-child.active {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+.grid-center {
+	display: grid;
+	overflow: hidden;
+	place-content: center;
+}

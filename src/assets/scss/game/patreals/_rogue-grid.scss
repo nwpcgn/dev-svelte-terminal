@@ -1,0 +1,66 @@
+:root {
+	--size: 600px;
+	--gap: 1px;
+	--cols: 30;
+	--rows: 30;
+}
+
+.rogue-grid {
+	display: grid;
+	width: var(--size);
+	width: var(--size);
+	grid-template-columns: repeat(var(--cols), 1fr);
+	grid-template-rows: repeat(var(--rows), 1fr);
+	gap: var(--gap);
+	padding: var(--gap);
+	position: relative;
+
+	.tile {
+		display: grid;
+		grid-template: 1 / 1;
+		aspect-ratio: 1 / 1;
+		position: relative;
+		overflow: hidden;
+
+		> * {
+			grid-row: 1;
+			grid-column: 1;
+			display: grid;
+			place-content: center;
+			overflow: hidden;
+		}
+
+		.start {
+			background-color: oklch(69.6% 0.17 162.48);
+			z-index: -1;
+		}
+		.end {
+			background-color: oklch(59.2% 0.249 0.584);
+			z-index: -1;
+		}
+
+		.player {
+			background-color: oklch(58.6% 0.253 17.585);
+			--tile-color: oklch(58.6% 0.253 17.585);
+			z-index: 1;
+		}
+
+		.fog {
+			background-color: red;
+		}
+	}
+}
+
+$icons: (
+	'tile': #cbd5e1,
+	'tile-0': #0069a8,
+	'tile-1': #1e293b
+);
+
+@each $name, $color in $icons {
+	.#{$name} {
+		--tile-color: #{$color};
+		background-color: var(--tile-color);
+		color: var(--tile-color);
+	}
+}

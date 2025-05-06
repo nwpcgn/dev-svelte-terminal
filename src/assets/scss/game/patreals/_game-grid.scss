@@ -1,0 +1,56 @@
+:root {
+	--gg-size: 900px;
+	--gg-gap: 1px;
+	--gg-cols: 10;
+	--gg-rows: 10;
+}
+
+.rogue-grid {
+	display: grid;
+	width: var(--gg-size);
+	grid-template-columns: repeat(var(--gg-cols), 1fr);
+	grid-template-rows: repeat(var(--gg-rows), 1fr);
+	gap: var(--gg-gap);
+	padding: var(--gg-gap);
+	position: relative;
+
+	.rogue-tile {
+		display: grid;
+		grid-template: 1 / 1;
+		aspect-ratio: 1 / 1;
+		position: relative;
+		overflow: hidden;
+		background-color: var(--bs-light);
+		color: var(--bs-gray-300);
+
+		> * {
+			grid-row: 1;
+			grid-column: 1;
+			display: grid;
+			place-content: center;
+			overflow: hidden;
+		}
+
+		&.wall {
+			background: var(--gb-medium);
+		}
+
+		&.floor {
+			background: var(--gb-200);
+		}
+
+		.player {
+			background: var(--gb-primary);
+		}
+	}
+
+	.t-1 {
+		background-color: var(--bs-dark);
+		color: var(--bs-dark);
+	}
+
+	.t-0 {
+		background-color: var(--bs-warning);
+		color: var(--bs-warning);
+	}
+}

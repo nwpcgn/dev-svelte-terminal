@@ -1,84 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Press+Start+2P&family=Uncial+Antiqua&display=swap');
 @import 'tailwindcss';
-@plugin '@tailwindcss/typography';
 
-@layer base, components, utilities;
-
-@layer base {
-	.font-header {
-		font-family: 'Press Start 2P', system-ui;
-		font-weight: 400;
-		font-style: normal;
-	}
-
-	.font-sub {
-		font-family: 'Uncial Antiqua', system-ui;
-		font-weight: 400;
-		font-style: normal;
-	}
-
-	.font-base {
-		font-family: 'Fira Code', monospace;
-		font-optical-sizing: auto;
-		font-style: normal;
-	}
-
-	body {
-		font-family: 'Fira Code', monospace;
-		font-weight: 400;
-		font-style: normal;
-		padding: 0;
-		margin: 0;
-		width: 100vw;
-		height: 100vh;
-		overflow: hidden;
-		display: flex;
-		flex-direction: column;
-	}
-
-	h1,
-	h2,
-	h3 {
-		font-family: 'Press Start 2P', system-ui;
-		font-weight: 400;
-	}
-
-	h4,
-	h5,
-	h6 {
-		font-family: 'Uncial Antiqua', system-ui;
-		font-weight: 600;
-	}
-
-	h1 {
-		@apply text-4xl;
-	}
-
-	h2 {
-		@apply text-3xl;
-	}
-
-	h3 {
-		@apply text-2xl;
-	}
-
-	h4 {
-		@apply text-xl;
-	}
-
-	h5 {
-		@apply text-lg;
-	}
-
-	h6 {
-		@apply text-xs;
-	}
-
-	p {
-		@apply text-base;
-	}
-
-	p.lead {
-		@apply font-bold;
-	}
+@theme {
+	--color-accent-50: #fffafe;
+	--color-accent-100: #fcf2fb;
+	--color-accent-200: #fadef5;
+	--color-accent-300: #f7cbee;
+	--color-accent-400: #f2a7e1;
+	--color-accent-500: #ee82cf;
+	--color-accent-600: #d66bb4;
+	--color-accent-700: #b3498c;
+	--color-accent-800: #8f2f65;
+	--color-accent-900: #6b1b44;
+	--color-accent-950: #450b26;
 }
+
+/* @plugin '@tailwindcss/typography'; */

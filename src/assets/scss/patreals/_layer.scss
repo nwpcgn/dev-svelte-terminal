@@ -1,0 +1,108 @@
+// :root {
+//   --page-animation-duration: 1.5s;
+//   --page-animation-delay: 0s;
+//   --page-transform-duration: 0.5s;
+//   --page-transform-delay: 0s;
+// }
+
+.page-layer {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	&.fix {
+		overflow-y: hidden;
+	}
+
+	&.center {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&.nwp {
+		animation: var(--page-animation-duration) cubic-bezier(0.25, 1, 0.3, 1)
+			circle-in-center both;
+		animation-delay: var(--page-animation-delay);
+	}
+}
+
+.page-layer {
+	&.top,
+	&.bottom,
+	&.left,
+	&.right {
+		transition:
+			transform var(--page-transform-duration) ease-in-out
+				var(--page-transform-delay),
+			opacity var(--page-transform-duration) ease-in
+				calc(var(--page-transform-delay) * 0.5);
+		opacity: 0;
+	}
+
+	&.top {
+		transform: translate(0, -100%);
+	}
+
+	&.bottom {
+		transform: translate(0, 100%);
+	}
+
+	&.left {
+		transform: translate(-100%, 0);
+	}
+
+	&.right {
+		transform: translate(100%, 0);
+	}
+
+	&.active {
+		transform: translate(0, 0);
+	}
+}
+
+.circle-center {
+	animation: var(--page-animation-duration) cubic-bezier(0.25, 1, 0.3, 1)
+		circle-in-center both;
+	animation-delay: var(--page-animation-delay);
+}
+
+.circle-in {
+	animation: var(--page-animation-duration) cubic-bezier(0.25, 1, 0.3, 1)
+		circle-in-hesitate both;
+	animation-delay: var(--page-animation-delay);
+}
+
+@keyframes circle-in-center {
+	from {
+		clip-path: circle(0%);
+	}
+
+	to {
+		clip-path: circle(125%);
+	}
+}
+
+.grid-center {
+	display: grid;
+	overflow: hidden;
+	place-content: center;
+}
+
+@keyframes circle-in-hesitate {
+	0% {
+		clip-path: circle(0%);
+	}
+
+	40% {
+		clip-path: circle(40%);
+	}
+
+	100% {
+		clip-path: circle(125%);
+	}
+}

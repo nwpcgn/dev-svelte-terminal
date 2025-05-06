@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+	--box-width: var(--page-width);
+	--box-padding: 1rem;
+	--gb-url: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAMAAAAPdrEwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURQAAABgQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMM8PuMAAAEAdFJOU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBT9wclAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGHRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4xLjVkR1hSAAAA5UlEQVRoQ+3MQQrDMBBD0fb+h06N/2A+MTHdTtBbKRpHn0u+UtUf6oepqinTQ1VT62kfyNgbuHcGTaYXmqbT9XXEU6vDUaZvWk/XHxtfn/KOa6YXrk2n/UGGG7K5J8NNpgc3rafBAW7I5p4MGmR6oMFrpvf8xG+ckemV0XraB+czv3RGpldG62n47PzEb5yR6ZXxmmm4IZt7MmiQ6YEGrad9IGNv4N4ZNJleaJpO19cRT60OR5m+aT1df2x8fco7rpleuDad9gcZbsjmngw3mR7ctJ4GB1T1h/phqmrK9FDV1HH6un4ss9jsFZtJkQAAAABJRU5ErkJggg==);
+}
+
+.game-box {
+	border-image: url(img/border.png) 12 fill / 12px / 12px;
+	padding: var(--box-padding);
+	background-color: var(--color-base-100);
+	width: 100%;
+	max-width: var(--box-width);
+}
+
+.game-banner {
+	background-color: var(--color-warning);
+	clip-path: polygon(
+		0% 15%,
+		15% 15%,
+		15% 0%,
+		85% 0%,
+		85% 15%,
+		100% 15%,
+		100% 66%,
+		85% 85%,
+		85% 100%,
+		15% 100%,
+		15% 85%,
+		0 69%
+	);
+	aspect-ratio: 8/2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 60px;
+}
+
+.gb-box {
+	border: 22px solid;
+	border-image: var(--gb-url) 42 / 24px / 12px stretch;
+	background-color: var(--color-base-100);
+}
+
+.gb-box {
+	font-family: 'Press Start 2P', system-ui;
+	font-weight: 400;
+}
+
+.game-box,
+.gb-box {
+	header {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-xs);
+	}
+
+	nav {
+		padding-top: var(--spacing-sm);
+		padding-bottom: var(--spacing-sm);
+		display: flex;
+		justify-content: center;
+		gap: var(--spacing-sm);
+	}
+
+	h2 {
+		font-size: clamp(1rem, 8.696vw + -0.739rem, 3.5rem);
+		font-weight: 700;
+	}
+
+	h3 {
+		font-size: clamp(1rem, 4.87vw + 0.026rem, 2.4rem);
+		font-weight: 400;
+	}
+
+	h4 {
+		font-size: clamp(1rem, 2.783vw + 0.443rem, 1.8rem);
+		font-weight: 200;
+	}
+
+	p {
+		font-size: clamp(1rem, 0.591vw + 0.882rem, 1.26rem);
+		font-weight: 300;
+		line-height: 1.4;
+	}
+}

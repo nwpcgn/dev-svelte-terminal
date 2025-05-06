@@ -1,0 +1,25 @@
+:root {
+	--fs: 24px;
+}
+
+svg {
+	&.icon,
+	&.nwp-icon,
+	&.pkmn-icon {
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		stroke-width: 0;
+		stroke: currentColor;
+		fill: currentColor;
+		font-size: var(--fs);
+	}
+
+	&.nwp-icon {
+		--fs: 24px;
+	}
+
+	&.pkmn-icon {
+		--fs: 20px;
+	}
+}

@@ -1,0 +1,447 @@
+const data = [
+	{
+		slug: 'account',
+		name: 'Account',
+		icon: 'nwp-account',
+		selected: false
+	},
+	{
+		slug: 'archive',
+		name: 'Archive',
+		icon: 'nwp-archive',
+		selected: false
+	},
+	{
+		slug: 'auto',
+		name: 'Auto',
+		icon: 'nwp-auto',
+		selected: false
+	},
+	{
+		slug: 'auto_off',
+		name: 'Auto Off',
+		icon: 'nwp-auto-off',
+		selected: false
+	},
+	{
+		slug: 'back',
+		name: 'Back',
+		icon: 'nwp-back',
+		selected: false
+	},
+	{
+		slug: 'bar',
+		name: 'Bar',
+		icon: 'nwp-bar',
+		selected: false
+	},
+	{
+		slug: 'blank',
+		name: 'Blank',
+		icon: 'nwp-blank',
+		selected: false
+	},
+	{
+		slug: 'burger',
+		name: 'Burger',
+		icon: 'nwp-burger',
+		selected: false
+	},
+	{
+		slug: 'clear',
+		name: 'Clear',
+		icon: 'nwp-clear',
+		selected: false
+	},
+	{
+		slug: 'close',
+		name: 'Close',
+		icon: 'nwp-close',
+		selected: false
+	},
+	{
+		slug: 'coins',
+		name: 'Coins',
+		icon: 'nwp-coins',
+		selected: false
+	},
+	{
+		slug: 'cols',
+		name: 'Cols',
+		icon: 'nwp-cols',
+		selected: false
+	},
+	{
+		slug: 'db',
+		name: 'Db',
+		icon: 'nwp-db',
+		selected: false
+	},
+	{
+		slug: 'dice',
+		name: 'Dice',
+		icon: 'nwp-dice',
+		selected: false
+	},
+	{
+		slug: 'dice_1',
+		name: 'Dice 1',
+		icon: 'nwp-dice-1',
+		selected: false
+	},
+	{
+		slug: 'dice_2',
+		name: 'Dice 2',
+		icon: 'nwp-dice-2',
+		selected: false
+	},
+	{
+		slug: 'dice_3',
+		name: 'Dice 3',
+		icon: 'nwp-dice-3',
+		selected: false
+	},
+	{
+		slug: 'dice_4',
+		name: 'Dice 4',
+		icon: 'nwp-dice-4',
+		selected: false
+	},
+	{
+		slug: 'dice_5',
+		name: 'Dice 5',
+		icon: 'nwp-dice-5',
+		selected: false
+	},
+	{
+		slug: 'dice_6',
+		name: 'Dice 6',
+		icon: 'nwp-dice-6',
+		selected: false
+	},
+	{
+		slug: 'edit',
+		name: 'Edit',
+		icon: 'nwp-edit',
+		selected: false
+	},
+	{
+		slug: 'enemy',
+		name: 'Enemy',
+		icon: 'nwp-enemy',
+		selected: false
+	},
+	{
+		slug: 'expand_1',
+		name: 'Expand 1',
+		icon: 'nwp-expand-1',
+		selected: false
+	},
+	{
+		slug: 'expand_2',
+		name: 'Expand 2',
+		icon: 'nwp-expand-2',
+		selected: false
+	},
+	{
+		slug: 'expand_3',
+		name: 'Expand 3',
+		icon: 'nwp-expand-3',
+		selected: false
+	},
+	{
+		slug: 'film',
+		name: 'Film',
+		icon: 'nwp-film',
+		selected: false
+	},
+	{
+		slug: 'full_1',
+		name: 'Full 1',
+		icon: 'nwp-full-1',
+		selected: false
+	},
+	{
+		slug: 'full_2',
+		name: 'Full 2',
+		icon: 'nwp-full-2',
+		selected: false
+	},
+	{
+		slug: 'game',
+		name: 'Game',
+		icon: 'nwp-game',
+		selected: false
+	},
+	{
+		slug: 'grid',
+		name: 'Grid',
+		icon: 'nwp-grid',
+		selected: false
+	},
+	{
+		slug: 'height',
+		name: 'Height',
+		icon: 'nwp-height',
+		selected: false
+	},
+	{
+		slug: 'home',
+		name: 'Home',
+		icon: 'nwp-home',
+		selected: false
+	},
+	{
+		slug: 'info',
+		name: 'Info',
+		icon: 'nwp-info',
+		selected: false
+	},
+	{
+		slug: 'key',
+		name: 'Key',
+		icon: 'nwp-key',
+		selected: false
+	},
+	{
+		slug: 'left',
+		name: 'Left',
+		icon: 'nwp-left',
+		selected: false
+	},
+	{
+		slug: 'mail',
+		name: 'Mail',
+		icon: 'nwp-mail',
+		selected: false
+	},
+	{
+		slug: 'map_1',
+		name: 'Map 1',
+		icon: 'nwp-map-1',
+		selected: false
+	},
+	{
+		slug: 'map_2',
+		name: 'Map 2',
+		icon: 'nwp-map-2',
+		selected: false
+	},
+	{
+		slug: 'menu',
+		name: 'Menu',
+		icon: 'nwp-menu',
+		selected: false
+	},
+	{
+		slug: 'menu1',
+		name: 'Menu1',
+		icon: 'nwp-menu1',
+		selected: false
+	},
+	{
+		slug: 'options',
+		name: 'Options',
+		icon: 'nwp-options',
+		selected: false
+	},
+	{
+		slug: 'pause',
+		name: 'Pause',
+		icon: 'nwp-pause',
+		selected: false
+	},
+	{
+		slug: 'pencil',
+		name: 'Pencil',
+		icon: 'nwp-pencil',
+		selected: false
+	},
+	{
+		slug: 'play',
+		name: 'Play',
+		icon: 'nwp-play',
+		selected: false
+	},
+	{
+		slug: 'player',
+		name: 'Player',
+		icon: 'nwp-player',
+		selected: false
+	},
+	{
+		slug: 'pokeball',
+		name: 'Pokeball',
+		icon: 'nwp-pokeball',
+		selected: false
+	},
+	{
+		slug: 'refresh',
+		name: 'Refresh',
+		icon: 'nwp-refresh',
+		selected: false
+	},
+	{
+		slug: 'refresh1',
+		name: 'Refresh1',
+		icon: 'nwp-refresh1',
+		selected: false
+	},
+	{
+		slug: 'right',
+		name: 'Right',
+		icon: 'nwp-right',
+		selected: false
+	},
+	{
+		slug: 'rows',
+		name: 'Rows',
+		icon: 'nwp-rows',
+		selected: false
+	},
+	{
+		slug: 'search',
+		name: 'Search',
+		icon: 'nwp-search',
+		selected: false
+	},
+	{
+		slug: 'send',
+		name: 'Send',
+		icon: 'nwp-send',
+		selected: false
+	},
+	{
+		slug: 'server',
+		name: 'Server',
+		icon: 'nwp-server',
+		selected: false
+	},
+	{
+		slug: 'settings1',
+		name: 'Settings1',
+		icon: 'nwp-settings1',
+		selected: false
+	},
+	{
+		slug: 'shield',
+		name: 'Shield',
+		icon: 'nwp-shield',
+		selected: false
+	},
+	{
+		slug: 'skull_1',
+		name: 'Skull 1',
+		icon: 'nwp-skull-1',
+		selected: false
+	},
+	{
+		slug: 'skull_2',
+		name: 'Skull 2',
+		icon: 'nwp-skull-2',
+		selected: false
+	},
+	{
+		slug: 'star',
+		name: 'Star',
+		icon: 'nwp-star',
+		selected: false
+	},
+	{
+		slug: 'start',
+		name: 'Start',
+		icon: 'nwp-start',
+		selected: false
+	},
+	{
+		slug: 'tag',
+		name: 'Tag',
+		icon: 'nwp-tag',
+		selected: false
+	},
+	{
+		slug: 'text_format',
+		name: 'Text Format',
+		icon: 'nwp-text_format',
+		selected: false
+	},
+	{
+		slug: 'thumb',
+		name: 'Thumb',
+		icon: 'nwp-thumb',
+		selected: false
+	},
+	{
+		slug: 'thumb_off',
+		name: 'Thumb Off',
+		icon: 'nwp-thumb-off',
+		selected: false
+	},
+	{
+		slug: 'tiles',
+		name: 'Tiles',
+		icon: 'nwp-tiles',
+		selected: false
+	},
+	{
+		slug: 'tools',
+		name: 'Tools',
+		icon: 'nwp-tools',
+		selected: false
+	},
+	{
+		slug: 'upload',
+		name: 'Upload',
+		icon: 'nwp-upload',
+		selected: false
+	},
+	{
+		slug: 'user',
+		name: 'User',
+		icon: 'nwp-user',
+		selected: false
+	},
+	{
+		slug: 'video',
+		name: 'Video',
+		icon: 'nwp-video',
+		selected: false
+	},
+	{
+		slug: 'video_off',
+		name: 'Video Off',
+		icon: 'nwp-video-off',
+		selected: false
+	},
+	{
+		slug: 'volume_off',
+		name: 'Volume Off',
+		icon: 'nwp-volume-off',
+		selected: false
+	},
+	{
+		slug: 'volume_on',
+		name: 'Volume On',
+		icon: 'nwp-volume-on',
+		selected: false
+	},
+	{
+		slug: 'warning',
+		name: 'Warning',
+		icon: 'nwp-warning',
+		selected: false
+	},
+	{
+		slug: 'weight',
+		name: 'Weight',
+		icon: 'nwp-weight',
+		selected: false
+	},
+	{
+		slug: 'wheel',
+		name: 'Wheel',
+		icon: 'nwp-wheel',
+		selected: false
+	}
+]
+export default data

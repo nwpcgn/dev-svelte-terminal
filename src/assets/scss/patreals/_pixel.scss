@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+:root {
+	--color-parker-50: oklch(96.51% 0.036 188.17);
+	--color-parker-100: oklch(93.37% 0.07 187.19);
+	--color-parker-200: oklch(88.55% 0.124 184.38);
+	--color-parker-300: oklch(85.27% 0.15 181.47);
+	--color-parker-400: oklch(66.55% 0.118 181.07);
+	--color-parker-500: oklch(43.35% 0.075 182.23);
+	--color-parker-600: oklch(37.51% 0.064 182.63);
+	--color-parker-700: oklch(31.06% 0.053 183.16);
+	--color-parker-800: oklch(24.28% 0.04 183.98);
+	--color-parker-900: oklch(16.9% 0.028 186.23);
+	--color-parker-950: oklch(12.76% 0.019 187.57);
+	--color-marine-50: #e0f1ff;
+	--color-marine-100: #c2e3ff;
+	--color-marine-200: #85c8ff;
+	--color-marine-300: #47acff;
+	--color-marine-400: #0a91ff;
+	--color-marine-500: #0071ce;
+	--color-marine-600: #005aa3;
+	--color-marine-700: #00437a;
+	--color-marine-800: #002d52;
+	--color-marine-900: #001629;
+	--color-marine-950: #000b14;
+	--color-sun-50: #fffaeb;
+	--color-sun-100: #fff3d1;
+	--color-sun-200: #ffe8a8;
+	--color-sun-300: #ffdc7a;
+	--color-sun-400: #ffcf4d;
+	--color-sun-500: #ffc220;
+	--color-sun-600: #e6a800;
+	--color-sun-700: #ad7f00;
+	--color-sun-800: #755600;
+	--color-sun-900: #382900;
+	--color-sun-950: #1f1600;
+	--color-night-50: #e8f8fd;
+	--color-night-100: #d0f0fb;
+	--color-night-200: #a2e1f6;
+	--color-night-300: #78d4f3;
+	--color-night-400: #49c5ee;
+	--color-night-500: #1ab7ea;
+	--color-night-600: #1294c0;
+	--color-night-700: #0d7091;
+	--color-night-800: #09485d;
+	--color-night-900: #04242f;
+	--color-night-950: #021217;
+}
+
+.gb-wrapp,
+.gameboy {
+	font-family: 'Press Start 2P', monospace;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.gb-content {
+	width: var(--page-width);
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: var(--content-space);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xl);
+}
+
+.gb-framed {
+	--box-width: 480px;
+	--box-padding: 1rem;
+	--gb-url: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAMAAAAPdrEwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURQAAABgQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMM8PuMAAAEAdFJOU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBT9wclAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGHRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4xLjVkR1hSAAAA5UlEQVRoQ+3MQQrDMBBD0fb+h06N/2A+MTHdTtBbKRpHn0u+UtUf6oepqinTQ1VT62kfyNgbuHcGTaYXmqbT9XXEU6vDUaZvWk/XHxtfn/KOa6YXrk2n/UGGG7K5J8NNpgc3rafBAW7I5p4MGmR6oMFrpvf8xG+ckemV0XraB+czv3RGpldG62n47PzEb5yR6ZXxmmm4IZt7MmiQ6YEGrad9IGNv4N4ZNJleaJpO19cRT60OR5m+aT1df2x8fco7rpleuDad9gcZbsjmngw3mR7ctJ4GB1T1h/phqmrK9FDV1HH6un4ss9jsFZtJkQAAAABJRU5ErkJggg==);
+	border: 22px solid;
+	border-image: var(--gb-url) 42 / 24px / 12px stretch;
+	background-color: var(--color-base-100);
+}
+
+.gb-nav {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.gb-btn {
+	border: 6px solid;
+	border-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgdmVyc2lvbj0iMS4xIgogICB3aWR0aD0iNSIKICAgaGVpZ2h0PSI1IgogICBpZD0ic3ZnMSIKICAgc29kaXBvZGk6ZG9jbmFtZT0iYS5zdmciCiAgIGlua3NjYXBlOmV4cG9ydC1maWxlbmFtZT0iYS5wbmciCiAgIGlua3NjYXBlOmV4cG9ydC14ZHBpPSI5NiIKICAgaW5rc2NhcGU6ZXhwb3J0LXlkcGk9Ijk2IgogICBpbmtzY2FwZTp2ZXJzaW9uPSIxLjMuMiAoMDkxZTIwZSwgMjAyMy0xMS0yNSwgY3VzdG9tKSIKICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiCiAgIHhtbG5zOnNvZGlwb2RpPSJodHRwOi8vc29kaXBvZGkuc291cmNlZm9yZ2UubmV0L0RURC9zb2RpcG9kaS0wLmR0ZCIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcwogICAgIGlkPSJkZWZzMSIgLz4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9Im5hbWVkdmlldzEiCiAgICAgcGFnZWNvbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcmNvbG9yPSIjMDAwMDAwIgogICAgIGJvcmRlcm9wYWNpdHk9IjAuMjUiCiAgICAgaW5rc2NhcGU6c2hvd3BhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6cGFnZW9wYWNpdHk9IjAuMCIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIKICAgICBpbmtzY2FwZTp6b29tPSIxMzUuMiIKICAgICBpbmtzY2FwZTpjeD0iMi41IgogICAgIGlua3NjYXBlOmN5PSIyLjQ5NjMwMTgiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9Ijk5MSIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iLTkiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9Ii05IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ic3ZnMSIgLz4KICA8cGF0aAogICAgIGQ9Ik0gMS42NjY2NjY2LDAgSCAzLjMzMzMzMzQgViAxLjY2NjY2NjYgSCAxLjY2NjY2NjYgWiBNIDAsMS42NjY2NjY2IEggMS42NjY2NjY2IFYgMy4zMzMzMzM0IEggMCBaIG0gMy4zMzMzMzM0LDAgSCA1IFYgMy4zMzMzMzM0IEggMy4zMzMzMzM0IFogTSAxLjY2NjY2NjYsMy4zMzMzMzM0IEggMy4zMzMzMzM0IFYgNSBIIDEuNjY2NjY2NiBaIgogICAgIGZpbGw9IiMyMTI1MjkiCiAgICAgaWQ9InBhdGgxIgogICAgIHN0eWxlPSJzdHJva2Utd2lkdGg6MS42NjY2NiIgLz4KPC9zdmc+Cg==)
+		2 / 6px / 4px stretch;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: var(--spacing-xs);
+	padding: var(--spacing-xs);
+	background-color: var(--color-parker-500);
+	color: var(--color-parker-50);
+}
+
+.gb-marine {
+	background-color: var(--color-marine-500);
+	color: var(--color-marine-50);
+}

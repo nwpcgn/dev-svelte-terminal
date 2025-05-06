@@ -20,6 +20,7 @@
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.11",
+		"sass": "^1.87.0",
 		"svelte": "^5.28.1",
 		"svelte-check": "^4.1.6",
 		"tailwindcss": "^4.0.0",
@@ -27,6 +28,8 @@
 		"vite": "^6.3.2"
 	},
 	"dependencies": {
+		"@mateothegreat/svelte5-router": "^2.14.1",
+		"rot-js": "^2.2.1",
 		"svelte-canvas": "^2.0.2"
 	}
 }

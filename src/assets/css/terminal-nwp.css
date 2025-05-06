@@ -1,0 +1,78 @@
+:root {
+	--spacing-base-define: 1rem;
+	--page-width-define: 920px;
+	--page-width-sm-define: 360px;
+	--app-body-scroll-y: hidden;
+	--app-main-scroll-y: hidden;
+	--page-animation-duration: 1.5s;
+	--page-animation-delay: 0.2s;
+	--page-transform-duration: 0.5s;
+	--page-transform-delay: 0.1s;
+}
+
+:root {
+	--page-width: var(--page-width-define);
+	--page-width-sm: var(--page-width-sm-define);
+	--body-scroll-y: var(--app-body-scroll-y, hidden);
+	--main-scroll-y: var(--app-main-scroll-y, hidden);
+	--spacing-base: var(--spacing-base-define);
+	--spacing-xs: calc(var(--spacing-base) * 0.25);
+	--spacing-sm: calc(var(--spacing-base) * 0.5);
+	--spacing-md: calc(var(--spacing-base) * 0.75);
+	--spacing-lg: calc(var(--spacing-base) * 1.5);
+	--spacing-xl: calc(var(--spacing-base) * 2);
+	--content-space: var(--spacing-base);
+	--page-space: var(--content-space);
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--font-content);
+	font-size: var(--font-size);
+	font-weight: 400;
+	line-height: var(--line-height);
+	background-color: var(--background);
+	color: var(--foreground);
+	text-rendering: optimizeLegibility;
+	font-variant-ligatures: contextual;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.nwp {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-headings);
+	}
+}
+
+.nwp.secondary {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-secondary);
+	}
+}
