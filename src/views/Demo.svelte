@@ -98,7 +98,7 @@
 		<div class="page-sector content-1">
 			<section>
 				<h2 id="buttons">Buttons and links</h2>
-				<button>Button</button><a href="">Link</a>
+				<button>Button</button><a href="#/">Link</a>
 			</section>
 		</div>
 		<div class="page-sector content-1">

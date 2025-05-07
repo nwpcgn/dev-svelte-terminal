@@ -19,13 +19,15 @@
 		class="border-accent-500 border">
 		{#each value.tileMap as row, y}
 			{#each row as col, x}
-				<GridTile
-					onclick={tileclick}
-					{x}
-					{y}
-					color={col === '#' ? '#1a170f' : '#ee82cf'}
-					{col}
-					{tileSize}></GridTile>
+				{#if col !== '#'}
+					<GridTile
+						onclick={tileclick}
+						{x}
+						{y}
+						color={col === '#' ? '#1a170f' : '#ee82cf'}
+						{col}
+						{tileSize}></GridTile>
+				{/if}
 			{/each}
 			<HeroTile onclick={tileclick} {hero} color="#450b26" col="@" {tileSize}
 			></HeroTile>
